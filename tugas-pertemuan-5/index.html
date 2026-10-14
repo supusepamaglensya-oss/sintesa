@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SINTESA: portal layanan akademik FST Universitas Pattimura untuk surat aktif kuliah, transkrip sementara, cuti akademik, dan legalisir.">
+  <title>SINTESA – Portal Layanan Akademik FST Unpatti</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img src="img/logo.png" width="48" height="48" alt="Logo Universitas Pattimura">
+      <div>
+        <p class="site-name">SINTESA</p>
+        <p class="site-sub">Fakultas Sains dan Teknologi, Universitas Pattimura</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <ul class="nav-list">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#permohonan">Permohonan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten-utama">
+    <section id="beranda" class="intro" aria-labelledby="judul-intro">
+      <div class="wrap">
+        <h1 id="judul-intro">Urus surat dan dokumen akademik tanpa antre di loket</h1>
+        <p>Pilih layanan, isi formulir permohonan, lalu tunggu konfirmasi dari bagian akademik. Proses umumnya selesai dalam 1–3 hari kerja.</p>
+        <p><a class="btn" href="#permohonan">Ajukan permohonan</a></p>
+      </div>
+    </section>
+
+    <section id="layanan" class="layanan" aria-labelledby="judul-layanan">
+      <div class="wrap">
+        <h2 id="judul-layanan">Layanan tersedia</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Surat Aktif Kuliah</h3>
+            <p>Bukti bahwa Anda terdaftar sebagai mahasiswa aktif pada semester berjalan. Untuk beasiswa, BPJS, atau keperluan instansi.</p>
+            <p class="meta">Estimasi: 1 hari kerja</p>
+            <a class="btn btn-outline" href="#permohonan">Ajukan Surat Aktif Kuliah</a>
+          </article>
+          <article class="card">
+            <h3>Transkrip Sementara</h3>
+            <p>Rekap nilai mata kuliah yang sudah ditempuh sampai semester terakhir, ditandatangani oleh program studi.</p>
+            <p class="meta">Estimasi: 2 hari kerja</p>
+            <a class="btn btn-outline" href="#permohonan">Ajukan Transkrip Sementara</a>
+          </article>
+          <article class="card">
+            <h3>Cuti Akademik</h3>
+            <p>Pengajuan berhenti kuliah sementara untuk satu semester. Wajib diajukan sebelum masa registrasi ditutup.</p>
+            <p class="meta">Estimasi: 3 hari kerja</p>
+            <a class="btn btn-outline" href="#permohonan">Ajukan Cuti Akademik</a>
+          </article>
+          <article class="card">
+            <h3>Legalisir Dokumen</h3>
+            <p>Pengesahan salinan ijazah atau transkrip. Bawa dokumen asli saat pengambilan.</p>
+            <p class="meta">Estimasi: 2 hari kerja</p>
+            <a class="btn btn-outline" href="#permohonan">Ajukan Legalisir</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="permohonan" class="permohonan" aria-labelledby="judul-form">
+      <div class="wrap narrow">
+        <h2 id="judul-form">Formulir permohonan</h2>
+        <p id="petunjuk">Semua kolom bertanda <span aria-hidden="true">*</span><span class="sr-only">bintang</span> wajib diisi.</p>
+
+        <form action="#" method="post" aria-describedby="petunjuk">
+          <div class="field">
+            <label for="nama">Nama lengkap <span aria-hidden="true">*</span></label>
+            <input type="text" id="nama" name="nama" autocomplete="name" required minlength="3">
+          </div>
+
+          <div class="field">
+            <label for="nim">NIM <span aria-hidden="true">*</span></label>
+            <input type="text" id="nim" name="nim" inputmode="numeric" pattern="[0-9]{9,12}" aria-describedby="nim-hint" required>
+            <small id="nim-hint">Angka saja, 9–12 digit.</small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" required>
+            <small id="email-hint">Konfirmasi dikirim ke alamat ini.</small>
+          </div>
+
+          <div class="field">
+            <label for="layanan-pilih">Jenis layanan <span aria-hidden="true">*</span></label>
+            <select id="layanan-pilih" name="layanan" required>
+              <option value="">Pilih layanan</option>
+              <option>Surat Aktif Kuliah</option>
+              <option>Transkrip Sementara</option>
+              <option>Cuti Akademik</option>
+              <option>Legalisir Dokumen</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>Cara pengambilan <span aria-hidden="true">*</span></legend>
+            <label class="choice"><input type="radio" name="pengambilan" value="kampus" required> Ambil di kampus</label>
+            <label class="choice"><input type="radio" name="pengambilan" value="email"> Kirim lewat email (PDF)</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="keperluan">Keperluan <span aria-hidden="true">*</span></label>
+            <textarea id="keperluan" name="keperluan" rows="5" minlength="10" maxlength="500" aria-describedby="keperluan-hint" required></textarea>
+            <small id="keperluan-hint">Jelaskan singkat, 10–500 karakter.</small>
+          </div>
+
+          <button type="submit" class="btn">Kirim permohonan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak" class="site-footer">
+    <div class="wrap footer-inner">
+      <address>
+        Bagian Akademik FST Unpatti<br>
+        Kampus Poka, Ambon, Maluku<br>
+        <a href="mailto:akademik.fst@example.ac.id">akademik.fst@example.ac.id</a>
+      </address>
+      <p>Layanan: Senin–Jumat, 08.00–15.00 WIT.<br>Tugas Pertemuan 5 – Maglensya Yulya Supusepa (202451065)</p>
+    </div>
+  </footer>
+</body>
+</html>
